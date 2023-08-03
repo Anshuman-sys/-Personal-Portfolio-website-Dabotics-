@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1f242d;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10%;
+}
+
+.logo {
+    cursor: default;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 600;
+    animation: slideLeft 1s ease forwards;
+    opacity: 0;
+    color: #0ef;
+    text-shadow: 2px 2px 2px #0ef;
+}
+
+.navbar a {
+    display: inline-block;
+    color: #fff;
+    padding: 0 16px;
+    text-decoration: none;
+    transition: 0.3s all;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+    border-right: 2px solid white;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #0ef;
+    text-shadow: 1px 1px 1px #0ef;
+}
+
+.hero-container {
+    display: flex;
+    padding: 25px 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-side h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.info-side h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: slideRight 1s ease forwards;
+    opacity: 0;
+    text-shadow: 2px 2px 2px #0ef;
+    ;
+}
+
+.info-side h3 span {
+    color: #0ef;
+}
+
+.part-1 {
+    animation: part1 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.part-2 {
+    animation: part2 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+
+p {
+    line-height: 27px;
+    margin: 20px 0px 40px 0px;
+    animation: slideLeftP 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1.2s;
+}
+
+.hero-img img {
+    width: 350px;
+    height: 450px;
+    border-radius: 50% 50%;
+    padding: 30px;
+    animation: zoomin 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1.2s;
+    box-shadow: 5px 5px 10px 10px #0ef;
+    margin: 80px;
+}
+
+
+.education {
+    padding: 30px 0;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+.education-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.education-list div{
+    background-color:black;
+    padding:30px;
+    font-weight:300;
+    font-size:15px;
+    border-radius:12px;
+    animation: zoomin 1s ease forwards;
+    animation-delay:2.5s;
+    opacity:0;
+    box-shadow:5px 5px 5px #0ef;
+}
+.education-list div:hover{
+    background-color:#0ef;
+    transform:translateY(-20px);
+}
+.education-list h5{
+    margin-top:10px;
+}
+.education-list div h2,h5,p{
+    text-shadow:1px 1px 1px #0ef;
+    animation:slideleft 1s ease forwards;
+    animation-delay:2.9s;
+    opacity:0;
+}
+.Mywork{
+    padding:50px 0;
+}
+.mywork-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:60px;
+}
+.mywork-list div{
+    background-color:black;
+    font-size:15px;
+    font-weight:300;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:5px 5px 5px #0ef;
+    animation: zoomin 1s ease forwards;
+    animation-delay:3.2s;
+    opacity:0;
+}
+.mywork-list div:hover{
+    background-color:#0ef;
+    transform:translateY(-20px);
+}
+.mywork-list div h2,p{
+    text-shadow:1px 1px 1px #0ef;
+    animation:slideright 1s ease forwards;
+    animation-delay:3.4s;
+    opacity:0;
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes navMenu {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes part1 {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes part2 {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeftP {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@Keyframes slideleft{
+    0%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+@Keyframes slideright{
+    0%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+.contact{
+    padding:70px 0;
+}
+.contact-list i{
+    position:relative;
+    padding:11px;
+    border:2px solid #0ef;
+    border-radius:50%;
+    color:white;
+    margin-top:5px 20px;
+    transition:0.3ms;
+}
+.contact-list i:hover{
+    box-shadow:0 0 20px #0ef;
+}
+.contact-list h1{
+    margin-bottom:30px;
+}
+.mano i{
+    position:relative;
+    padding:5px;
+    border:2px solid black;
+    border-radius:50%;
+    color:black;
+    margin-top:5px 20px;
+    transition:0.3ms;
+    font-weight:700;
+}
+.mano{
+    font-size:30px;
+    font-weight:700;
+    text-align:center;
+    background-color:#0ef;
+    color:black;
+    height:1.5cm;
+    padding:1px;
+}
+
+@media only screen and (max-width:700px){
+    .hero-container .info-side h3{
+        font-size:10px;
+        font-weight:200;
+        padding-left:90px;
+    }
+    .hero-container .info-side h1{
+        font-size:20px;
+        font-weight:250;
+        padding-left:90px;
+    }
+    .hero-img img{
+        width:130px;
+        height:190px;
+        margin-left:30px;
+        box-shadow:5px 5px 8px #0ef;
+    }
+    .info-side h3 span{
+        font-size:15px;
+    }
+    .navbar a{
+        padding:0 4px;
+        font-size:10px;
+        letter-spacing:1px;
+        flex-wrap:wrap;
+        border:none;
+        overflow:hidden;
+        word-spacing:2px;
+    }
+    .navbar a:hover{
+        border-bottom:2px solid #0ef;
+    }
+    .header .navbar{
+        display:flex;
+        overflow:hidden;
+        border-right:none;
+    }
+    .info-side .part-1{
+        font-size:45px;;
+    }
+    .header .logo{
+        font-size:15px;
+    }
+    .mano p i{
+        font-weight:300;
+    }
+    .mano{
+        font-weight:400;
+        font-size:medium;
+        margin-bottom:7px;
+    }
+}
+
+
